@@ -47,7 +47,7 @@
 | 19 | A failing step names the tool, the file and the reason in its log (annotation or `::error::` line) | N-A | Each step is a single tool command whose own log names the file and reason. |
 | 20 | A `run:` block is within the limit on embedded program text of criterion 7 of [QC-YML-001]; a longer script is a file (`tools/`, or a shared repository fetched at a pinned ref) that the step calls with one command, and the workflow passes its settings through `env:` | Pass | The longest `run:` block has two lines. |
 | 21 | Logic used by more than one workflow or repository is a reusable workflow (`workflow_call`) or a composite action; each input has a `description`, a `type` and a `default` where one is sensible | N-A | One workflow; no logic is shared. |
-| 22 | Every workflow feature used is verified on the instance that runs it, and the host and version are recorded; a feature the target hosts differ on is noted in the header | Pass | VERIFY-RUN |
+| 22 | Every workflow feature used is verified on the instance that runs it, and the host and version are recorded; a feature the target hosts differ on is noted in the header | Pass | Verified on Gitea 1.27.3 (`/api/v1/version`): the pull_request run (run 1557) completed with state success on runner label ubuntu-latest. |
 | 23 | A reusable workflow states, in its header, how a caller pins it and the script it fetches, so the workflow and its script are the same release | N-A | Not a reusable workflow. |
 | 24 | A static test of the repository's workflows exists and runs on every pull request: valid YAML, required keys, explicit permissions and runner, no inline script above the limit | N-A | Optional; the workflow is linted by actionlint and yamllint in this review, no repeated static test exists for a single file. |
 
@@ -73,7 +73,7 @@
 
 ## Overall Verdict
 
-Go — every Mandatory criterion of QC-WF-001 and QC-YML-001 passes; the run on the host is recorded in the criterion 22 evidence. The `Doxyfile` output folder is `build/` (not `build/doxygen/` as the MIL-001 task summary says) because Doxygen creates only one directory level; the Go/No-Go criteria are not affected.
+Go — every Mandatory criterion of QC-WF-001 and QC-YML-001 passes; the workflow ran green on Gitea 1.27.3. The `Doxyfile` output folder is `build/` (not `build/doxygen/` as the MIL-001 task summary says) because Doxygen creates only one directory level; the Go/No-Go criteria are not affected.
 
 ## Action Items
 
