@@ -11,7 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-10-14 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version, adapted from the 026 NATO alphabet project | pending |
+| 2026-10-14 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version, adapted from the 026 NATO alphabet project | [1da8981] |
+| 2026-10-14 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Reviewed in RC-011 | pending |
 
 ---
 
@@ -46,3 +47,4 @@ Independent (no other story is needed), Negotiable (wording of the messages is o
 [BC-001]: ./business-case.md
 [MIL-002]: ./milestones/mil-002-nato-converter.md
 [UC-001]: ./uc-001/uc.md
+[1da8981]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/030-nato-phonetic-alphabet/commit/1da8981
