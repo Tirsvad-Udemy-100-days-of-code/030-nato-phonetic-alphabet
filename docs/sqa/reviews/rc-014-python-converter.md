@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-10-14 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Review of PY-002 | pending |
+| 2026-10-14 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Review of PY-002 | [80ec1bc] |
 
 ---
 
@@ -57,3 +57,4 @@ Go — every Mandatory criterion of QC-PY-001 passes or is not applicable (crite
 
 [PY-002]: ../../../src/nato_phonetic_alphabet/main.py
 [QC-PY-001]: ../../../framework/qc/code/qc-programming-python.md
+[80ec1bc]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/030-nato-phonetic-alphabet/commit/80ec1bc3640e1aa2ad1f152b9f71df39fa71c2d1
