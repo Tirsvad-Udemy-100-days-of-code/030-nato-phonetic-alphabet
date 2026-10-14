@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-10-14 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version, rows for RC-001 to RC-014 | pending |
+| 2026-10-14 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version, rows for RC-001 to RC-014 | [b69a604] |
 
 ---
 
@@ -75,3 +75,4 @@ Tracks backward and forward links between artifact instances so that the cross-a
 [RC-012]: ./reviews/rc-012-uc-001.md
 [RC-013]: ./reviews/rc-013-ssd-001.md
 [RC-014]: ./reviews/rc-014-python-converter.md
+[b69a604]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/030-nato-phonetic-alphabet/commit/b69a604341251be410672cee93910e528eecaef8
