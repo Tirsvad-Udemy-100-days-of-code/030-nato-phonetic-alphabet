@@ -1,0 +1,8 @@
+# yamllint configuration for the repository's YAML files (tool: yamllint).
+extends: default
+rules:
+  line-length:
+    max: 100
+  truthy:
+    check-keys: false
+  document-start: disable

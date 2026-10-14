@@ -1,0 +1,33 @@
+# Byte-compiled and cache files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.import_linter_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Packaging, build and Doxygen output
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Secrets and local configuration (personal tokens, never committed)
+.env
+.env.*
+!.env.example
+
+# Editors and operating system
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
