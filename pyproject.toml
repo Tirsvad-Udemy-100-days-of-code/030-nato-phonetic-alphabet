@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nato-phonetic-alphabet"
+version = "0.1.0"
+description = "Console tool that spells a word with the NATO phonetic alphabet and handles invalid input with exceptions (100 Days of Code, day 30)."
+readme = "README.md"
+requires-python = ">=3.13"
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE"]
+authors = [{ name = "Jens Tirsvad Nielsen" }]
+keywords = ["nato", "phonetic-alphabet", "exception-handling", "100-days-of-code"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.1",
+    "ruff==0.17.0",
+    "mypy==2.4.0",
+    "import-linter==2.15",
+]
+
+[project.scripts]
+nato-phonetic-alphabet = "nato_phonetic_alphabet.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+nato_phonetic_alphabet = ["data/*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 88
+src = ["src", "tests"]
+extend-exclude = ["framework", ".agents", ".claude"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "D"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["D"]
+
+[tool.mypy]
+strict = true
+files = ["src", "tests"]
+mypy_path = "src"
+
+[tool.importlinter]
+root_package = "nato_phonetic_alphabet"
+
+[[tool.importlinter.contracts]]
+name = "Dependencies point inward"
+type = "layers"
+layers = [
+    "nato_phonetic_alphabet.adapters",
+    "nato_phonetic_alphabet.application",
+    "nato_phonetic_alphabet.domain",
+]
