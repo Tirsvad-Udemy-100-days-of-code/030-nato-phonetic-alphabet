@@ -62,6 +62,7 @@ Go — every Mandatory criterion of QC-BC-001 and of QC-LANG-001 passes. The rev
 
 ---
 
+[SA-001]: ../../stakeholder-analysis.md
 [BC-001]: ../../business-case.md
 [QC-BC-001]: ../../../framework/qc/artifacts/qc-business-case.md
 [QC-LANG-001]: ../../../framework/qc/artifacts/qc-language-domain.md

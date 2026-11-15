@@ -1,6 +1,6 @@
-# Usage
+**English** · [Dansk](Usage-da) · [Bahasa Melayu](Usage-ms)
 
-🌐 **English** · [Dansk](Usage-da) · [Bahasa Melayu](Usage-ms)
+# Usage
 
 Activate the virtual environment (see [Install](Install)), then start the program:
 
@@ -18,13 +18,13 @@ nato-phonetic-alphabet
 
 The program asks for a word and prints the NATO code word of each letter, in order. Upper and lower case give the same result.
 
-![The tool spelling the word Hello](images/spell-word.png)
+![The tool spelling the word Hello](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/030-nato-phonetic-alphabet/raw/branch/main/docs/images/spell-word.png)
 
 ## Invalid input
 
 A digit, a space or a punctuation mark is not a letter. The program says so and asks again.
 
-![A word with a digit is rejected, then a valid word is spelled](images/retry-invalid.png)
+![A word with a digit is rejected, then a valid word is spelled](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/030-nato-phonetic-alphabet/raw/branch/main/docs/images/retry-invalid.png)
 
 ## Press Ctrl+C or Ctrl+D
 

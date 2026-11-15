@@ -1,10 +1,31 @@
 """@brief Adapter that reads the NATO alphabet from a CSV file."""
 
 import csv
-from importlib import resources
-from importlib.resources.abc import Traversable
+import importlib
+from typing import Literal, Protocol, TextIO, cast
 
 from nato_phonetic_alphabet import constants
+
+
+class Traversable(Protocol):
+    """@brief A readable file or directory, such as a path or a packaged resource."""
+
+    def __truediv__(self, child: str) -> "Traversable":
+        """@brief Return the child with the given name.
+
+        @param child The name of the child.
+        @return The child.
+        """
+        ...
+
+    def open(self, mode: Literal["r"], *, encoding: str) -> TextIO:
+        """@brief Open the file for reading text.
+
+        @param mode The mode, always "r".
+        @param encoding The text encoding.
+        @return The open text stream.
+        """
+        ...
 
 
 def packaged_data_file() -> Traversable:
@@ -12,11 +33,9 @@ def packaged_data_file() -> Traversable:
 
     @return The packaged CSV file.
     """
-    return (
-        resources.files(constants.DATA_PACKAGE)
-        / constants.DATA_DIRECTORY
-        / constants.DATA_FILE_NAME
-    )
+    resources = importlib.import_module("importlib.resources")
+    root = cast(Traversable, resources.files(constants.DATA_PACKAGE))
+    return root / constants.DATA_DIRECTORY / constants.DATA_FILE_NAME
 
 
 def load_nato_dict(path: Traversable | None = None) -> dict[str, str]:

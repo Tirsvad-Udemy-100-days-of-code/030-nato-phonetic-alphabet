@@ -1,6 +1,6 @@
-# Udvikling
+[English](Development) · **Dansk** · [Bahasa Melayu](Development-ms)
 
-🌐 [English](Development) · **Dansk** · [Bahasa Melayu](Development-ms)
+# Udvikling
 
 Sæt projektet op først ([Installation](Install-da)). Udvidelsen `dev` installerer pytest, ruff, mypy og import-linter.
 

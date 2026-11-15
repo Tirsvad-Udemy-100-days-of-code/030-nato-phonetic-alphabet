@@ -4,20 +4,22 @@
 | Key | Value |
 | --- | --- |
 | ID | BC-001 |
-| CrossReference | [SA-001] |
+| CrossReference | [SA-001], [PP-001], [MIL-004] |
 | Language | en |
-| Domain | it |
+| Domain | education |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-10-14 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version, reviewed in RC-001 | [f42e610] |
+| 2026-10-14 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version, reviewed in RC-001 | [f42e610] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective O6, success criterion 7, a scope item, a risk, an assumption and a constraint exception for the baseline milestone MIL-004; added the link definitions of the cited documents; set the domain to education; reviewed in autonomous mode, not independent | [7378ede] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Scope wording: the baseline milestone includes one behaviour-neutral rewrite of the imports of `csv_alphabet.py` so the OpenGrep scan passes; reviewed in autonomous mode, not independent | [90fbd21] |
 
 ---
 
 ## Executive Summary
 
-Day 30 of the Udemy course "100 Days of Code: The Complete Python Pro Bootcamp" extends the NATO phonetic alphabet console tool with exception handling: the user types a word and the program spells it out, and when the input holds a character that is not a letter the program catches the failed lookup, tells the user to enter letters only and asks again instead of crashing. This project delivers that assignment as a clean, tested, documented Python repository that other course participants and GitHub visitors can read, run and compare against their own solutions. It uses only the Python standard library at runtime.
+Day 30 of the Udemy course "100 Days of Code: The Complete Python Pro Bootcamp" extends the NATO phonetic alphabet console tool with exception handling: the user types a word and the program spells it out, and when the input holds a character that is not a letter the program catches the failed lookup, tells the user to enter letters only and asks again instead of crashing. This project delivers that assignment as a clean, tested, documented Python repository that other course participants and GitHub visitors can read, run and compare against their own solutions. It uses only the Python standard library at runtime. A later milestone, [MIL-004], brings the finished project to the baseline of the framework.
 
 ## Methodological and Standards Foundation
 
@@ -42,6 +44,7 @@ A small, exemplary solution lets the Product Owner practise professional project
 3. O3: Cover the behaviour with automated pytest tests that run in continuous integration.
 4. O4: Document the source with Doxygen comments and a `Doxyfile`, and document the project in a README and a wiki in English, Danish and Bahasa Malaysia, with screenshots.
 5. O5: Present the repository to GitHub viewers with a description and topics, and with no runtime dependencies.
+6. O6: Bring the finished project to the common baseline of the framework: the adopted framework release, the wiki in the framework's location `docs/wiki/`, complete licence metadata and review records for every changed document ([MIL-004]).
 
 ## Scope
 
@@ -53,6 +56,7 @@ A small, exemplary solution lets the Product Owner practise professional project
 - pytest test suite; continuous integration (CI) workflow that runs the tests.
 - README from the framework template; wiki pages in en, da and ms; screenshots for README and wiki.
 - Repository description and topics on the git host.
+- The baseline milestone [MIL-004]: framework release, wiki completed in `docs/wiki/`, README appendix, licence metadata, review records and the traceability matrix. It changes no behaviour of the program; its only change in `src/` is the rewrite of the imports of one adapter module so the OpenGrep scan passes (task 6).
 
 ### Out of Scope
 
@@ -61,6 +65,7 @@ A small, exemplary solution lets the Product Owner practise professional project
 - Runtime dependencies such as Pandas.
 - Non-Latin alphabets and digits (rejected with a message).
 - Other course days.
+- Any change to `src/` or `tests/` in the baseline milestone [MIL-004], except the behaviour-neutral rewrite of the imports of `src/nato_phonetic_alphabet/adapters/csv_alphabet.py` (task 6).
 
 ## Expected Benefits
 
@@ -89,6 +94,7 @@ The project supports the Product Owner's personal goal of completing the 100 Day
 | 4 | Setup works from the README | A fresh clone runs the program using only the README steps | Manual run of the README steps on Windows PowerShell |
 | 5 | Documentation complete | README sections of the template, wiki in 3 languages, Doxygen builds without warnings | `check-readme.sh` exit 0; every wiki page exists in en, da and ms; `doxygen Doxyfile` reports 0 warnings |
 | 6 | Repository presented | Description and at least 5 topics set | Repository page and API show both |
+| 7 | The baseline milestone is done (O6) | Wiki pages in 3 languages in `docs/wiki/`, `framework/scripts/check-readme.sh` exits with code 0, 100 % of the CI checks of the pull request of [MIL-004] pass | Files in `docs/wiki/`, the script exit code and the pull request status on the git host |
 
 ## Risks
 
@@ -99,6 +105,7 @@ The project supports the Product Owner's personal goal of completing the 100 Day
 | Danish and Bahasa Malaysia translations contain errors | S02 or S03 read wrong text | Keep wiki sentences short and simple; S01 reviews the translations in the pull request |
 | Starter code is copied verbatim | Originality concerns | The program is written fresh; only the supplied CSV data is reused, as the assignment intends |
 | Secrets in `.env` leak into the repository | Credential exposure | `.env` is git-ignored, never imported by the program or tests, and never echoed |
+| The documents of the baseline milestone [MIL-004] are reviewed by an AI stand-in for S01 | A defect is missed because the review is not independent | Every review record of the baseline says `Mode: autonomous, not independent`, and the end-of-run summary lists it for challenge |
 
 ## Assumptions
 
@@ -106,6 +113,7 @@ The project supports the Product Owner's personal goal of completing the 100 Day
 - Python 3.13 or newer is available on the machines of the readers.
 - The git host (Gitea) offers repository, topic and wiki features through its application programming interface (API) and git remote.
 - The CSV with 26 letter/code word rows supplied with the assignment is the data source.
+- The baseline milestone [MIL-004] is finished within one week of its own start, 2026-11-16, by 2026-11-23. For that milestone only, an AI stand-in for S01 reviews and accepts the changed documents.
 
 ## Constraints
 
@@ -114,6 +122,7 @@ The project supports the Product Owner's personal goal of completing the 100 Day
 - No runtime dependencies unless needed.
 - Tokens are read from `.env` for personal use only; the project and its tests never import or test it.
 - One pull request per milestone; no commit on `main`.
+- The baseline milestone [MIL-004] is the exception to the rule of one reviewer: S01 has authorised the assistant to commit, push, open the pull request and merge it in autonomous mode.
 
 ## Cost–Benefit Assessment
 
@@ -139,3 +148,7 @@ Proceed: the scope is small, the risks are low and every objective is verifiable
 
 [SA-001]: ./stakeholder-analysis.md
 [f42e610]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/030-nato-phonetic-alphabet/commit/f42e6109ac82937291e5c8207c0631f710b9da85
+[PP-001]: ./project-plan.md
+[MIL-004]: ./milestones/mil-004-framework-baseline.md
+[7378ede]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/030-nato-phonetic-alphabet/commit/7378eded894a69048cfc5c5c56c787efc4723a4e
+[90fbd21]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/030-nato-phonetic-alphabet/commit/90fbd2170d2f9295ad60edad82ef08ef96574ff6
