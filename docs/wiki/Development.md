@@ -1,6 +1,6 @@
-# Development
+**English** · [Dansk](Development-da) · [Bahasa Melayu](Development-ms)
 
-🌐 **English** · [Dansk](Development-da) · [Bahasa Melayu](Development-ms)
+# Development
 
 Set up the project first ([Install](Install)). The `dev` extra installs pytest, ruff, mypy and import-linter.
 

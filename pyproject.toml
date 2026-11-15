@@ -14,6 +14,11 @@ authors = [{ name = "Jens Tirsvad Nielsen" }]
 keywords = ["nato", "phonetic-alphabet", "exception-handling", "100-days-of-code"]
 dependencies = []
 
+[project.urls]
+Repository = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/030-nato-phonetic-alphabet"
+Documentation = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/030-nato-phonetic-alphabet/wiki"
+"Issue tracker" = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/030-nato-phonetic-alphabet/issues"
+
 [project.optional-dependencies]
 dev = [
     "pytest==9.1.1",

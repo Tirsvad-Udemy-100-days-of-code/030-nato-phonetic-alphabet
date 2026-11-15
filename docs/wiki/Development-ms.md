@@ -1,6 +1,6 @@
-# Pembangunan
+[English](Development) · [Dansk](Development-da) · **Bahasa Melayu**
 
-🌐 [English](Development) · [Dansk](Development-da) · **Bahasa Melayu**
+# Pembangunan
 
 Sediakan projek dahulu ([Pemasangan](Install-ms)). Pilihan tambahan `dev` memasang pytest, ruff, mypy dan import-linter.
 
