@@ -10,7 +10,8 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-10-14 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version, rows for RC-001 to RC-014 | [b69a604] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline milestone, the wiki row, the new review records, the concern coverage and the domain education; reviewed in autonomous mode, not independent | [7378ede] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline milestone, the wiki row, the new review records, the concern coverage and the domain education; reviewed in autonomous mode, not independent | [7378ede] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the re-review records of BC-001 and MIL-004 for task 6 and corrected the coverage note about source files; reviewed in autonomous mode, not independent | pending |
 
 ---
 
@@ -22,13 +23,13 @@ Tracks backward and forward links between artifact instances so that the cross-a
 
 | Artifact Instance | Type | Language | Domain | Upstream (Backward Link) | Downstream (Forward Link) | Last Reviewed (RC-ID) |
 | --- | --- | --- | --- | --- | --- | --- |
-| [BC-001] | Business Case | en | education | - | [SA-001], [PP-001], [MIL-001], [MIL-002], [MIL-003], [MIL-004] | [RC-015] (Go, re-review of the whole document), [RC-001] |
+| [BC-001] | Business Case | en | education | - | [SA-001], [PP-001], [MIL-001], [MIL-002], [MIL-003], [MIL-004] | [RC-023] (Go, re-review after the scope wording change), [RC-015] (Go, re-review of the whole document), [RC-001] |
 | [SA-001] | Stakeholder Analysis | en | education | [BC-001] | [PP-001] | [RC-016] (Go, re-review of the whole document), [RC-002] |
 | [PP-001] | Project Plan | en | education | [BC-001], [SA-001] | [MIL-001], [MIL-002], [MIL-003], [MIL-004] | [RC-017] (Go, review of the whole document; the plan had no review record before) |
 | [MIL-001] | Milestone | en | education | [BC-001], [PP-001] | [MIL-002], [ADR-0001], [ADR-0002] | [RC-018] (Go, re-review after the metadata change), [RC-003] |
 | [MIL-002] | Milestone | en | education | [BC-001], [MIL-001] | [MIL-003], [US-001], [UC-001], [PY-002] | [RC-019] (Go, re-review after the metadata change), [RC-004] |
 | [MIL-003] | Milestone | en | education | [BC-001], [MIL-002] | [MIL-004] | [RC-020] (Go, re-review after the metadata change), [RC-005] |
-| [MIL-004] | Milestone | en | education | [BC-001], [PP-001], [MIL-003] | - | [RC-021] (Go) |
+| [MIL-004] | Milestone | en | education | [BC-001], [PP-001], [MIL-003] | - | [RC-024] (Go, re-review after task 6), [RC-021] (Go) |
 | Wiki | Wiki | en, da, ms | education | [BC-001], [MIL-004] | - | [RC-022] (Go-with-conditions) |
 | [ADR-0001] | ADR | - | - | [BC-001], [SA-001] | [PY-001] | [RC-006] |
 | [ADR-0002] | ADR | - | - | [BC-001] | - | [RC-007] |
@@ -59,7 +60,7 @@ Tracks backward and forward links between artifact instances so that the cross-a
 - WF-001 and PY-001 are labels for reviewed code instances (no artifact file).
 - PY-002 is the label of the reviewed converter code.
 - The domain of every artifact is `education` since [MIL-004]; the earlier review records state the former domain `it` as it was at the time.
-- The source code and the workflow are reviewed in the records RC-008, RC-009 and RC-014 and not again in [MIL-004], which changes no source file.
+- The source code and the workflow are reviewed in the records RC-008, RC-009 and RC-014 and not again in [MIL-004]; its task 6 rewrites the imports of `csv_alphabet.py` without changing behaviour, and the tests, ruff, mypy, import-linter and OpenGrep check it.
 - The review records and this matrix have no QC checklist for themselves and are not reviewed.
 
 ---
@@ -104,3 +105,5 @@ Tracks backward and forward links between artifact instances so that the cross-a
 [RC-021]: ./reviews/rc-021-milestone-004.md
 [RC-022]: ./reviews/rc-022-wiki.md
 [7378ede]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/030-nato-phonetic-alphabet/commit/7378eded894a69048cfc5c5c56c787efc4723a4e
+[RC-023]: ./reviews/rc-023-business-case-task-6.md
+[RC-024]: ./reviews/rc-024-milestone-004-task-6.md

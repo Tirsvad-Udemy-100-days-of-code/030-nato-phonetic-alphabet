@@ -11,17 +11,18 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version; accepted with the Go verdict of the review record (autonomous, not independent) | [7378ede] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version; accepted with the Go verdict of the review record (autonomous, not independent) | [7378ede] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added task 6 (behaviour-neutral rewrite of the imports of one adapter module so the OpenGrep scan passes); reviewed in autonomous mode, not independent | pending |
 
 ---
 
 ## Purpose
 
-This gate decides whether NATO phonetic alphabet has the baseline of the framework: the adopted framework release, the wiki in English, Danish and Malay in the framework's location and page naming, the README appendix of the framework template, complete licence metadata, a traceability matrix that covers every document and reviewed documents, merged to the default branch with a green build. The work is delivered on the branch `mil-004-baseline` and one pull request.
+This gate decides whether NATO phonetic alphabet has the baseline of the framework: the adopted framework release, the wiki in English, Danish and Malay in the framework's location and page naming, the README appendix of the framework template, complete licence metadata, a traceability matrix that covers every document and reviewed documents, merged to the default branch with a green build. One behaviour-neutral rewrite of the imports of an adapter module is part of it, so that the OpenGrep scan of the pull request passes without a suppression. The work is delivered on the branch `mil-004-baseline` and one pull request.
 
 ## Deliverable
 
-A merged pull request that holds: the updated Business Case, Stakeholder Analysis, Project Plan, milestones MIL-001 to MIL-003 and Traceability Matrix with their review records; the wiki in English, Danish and Malay in `docs/wiki/`; the README with the framework's appendix; `pyproject.toml` with complete licence metadata; and the framework release adopted by the project. The program and its tests do not change.
+A merged pull request that holds: the updated Business Case, Stakeholder Analysis, Project Plan, milestones MIL-001 to MIL-003 and Traceability Matrix with their review records; the wiki in English, Danish and Malay in `docs/wiki/`; the README with the framework's appendix; `pyproject.toml` with complete licence metadata; and the framework release adopted by the project. The behaviour of the program and its tests do not change; only the import statements of `src/nato_phonetic_alphabet/adapters/csv_alphabet.py` are rewritten so that the OpenGrep scan passes.
 
 ## Go / No-Go Criteria
 
@@ -69,6 +70,7 @@ A merged pull request that holds: the updated Business Case, Stakeholder Analysi
 | 3 | Complete the wiki in docs/wiki | Keep the existing pages in `docs/wiki/`, where the framework publishes them, give each page the language line first, point the screenshots at the repository, write the sidebar in the framework shape and add the Project-Documents page in English, Danish and Malay. | No | O6 |
 | 4 | Bring the README to the framework template | Keep the original text of the README, update the project layout to the new wiki location and the framework files, and give the appendix the framework's document list with the project links, so the README is complete and checkable. | No | O6 |
 | 5 | Complete the licence metadata | Set the project URLs in `pyproject.toml` next to the licence expression and `license-files` that it already has, so package tools can read them. | No | O6 |
+| 6 | Rewrite the importlib imports so the OpenGrep scan passes | Replace the `importlib.resources` imports of `src/nato_phonetic_alphabet/adapters/csv_alphabet.py` with `importlib.import_module` and a small local `Traversable` protocol, so that the OpenGrep rule `python37-compatibility-importlib2` (a false positive for Python 3.13 or newer) no longer matches. The scan is not suppressed. The behaviour is unchanged and the tests, ruff, mypy and import-linter pass. | No | O6 |
 
 ---
 

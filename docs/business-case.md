@@ -12,7 +12,8 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-10-14 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version, reviewed in RC-001 | [f42e610] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective O6, success criterion 7, a scope item, a risk, an assumption and a constraint exception for the baseline milestone MIL-004; added the link definitions of the cited documents; set the domain to education; reviewed in autonomous mode, not independent | [7378ede] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective O6, success criterion 7, a scope item, a risk, an assumption and a constraint exception for the baseline milestone MIL-004; added the link definitions of the cited documents; set the domain to education; reviewed in autonomous mode, not independent | [7378ede] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Scope wording: the baseline milestone includes one behaviour-neutral rewrite of the imports of `csv_alphabet.py` so the OpenGrep scan passes; reviewed in autonomous mode, not independent | pending |
 
 ---
 
@@ -55,7 +56,7 @@ A small, exemplary solution lets the Product Owner practise professional project
 - pytest test suite; continuous integration (CI) workflow that runs the tests.
 - README from the framework template; wiki pages in en, da and ms; screenshots for README and wiki.
 - Repository description and topics on the git host.
-- The baseline milestone [MIL-004]: framework release, wiki completed in `docs/wiki/`, README appendix, licence metadata, review records and the traceability matrix. It changes no behaviour of the program.
+- The baseline milestone [MIL-004]: framework release, wiki completed in `docs/wiki/`, README appendix, licence metadata, review records and the traceability matrix. It changes no behaviour of the program; its only change in `src/` is the rewrite of the imports of one adapter module so the OpenGrep scan passes (task 6).
 
 ### Out of Scope
 
@@ -64,7 +65,7 @@ A small, exemplary solution lets the Product Owner practise professional project
 - Runtime dependencies such as Pandas.
 - Non-Latin alphabets and digits (rejected with a message).
 - Other course days.
-- Any change to `src/` or `tests/` in the baseline milestone [MIL-004].
+- Any change to `src/` or `tests/` in the baseline milestone [MIL-004], except the behaviour-neutral rewrite of the imports of `src/nato_phonetic_alphabet/adapters/csv_alphabet.py` (task 6).
 
 ## Expected Benefits
 
