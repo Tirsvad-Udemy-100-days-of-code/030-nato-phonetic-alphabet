@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial review record; verdict Go (autonomous, not independent) | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial review record; verdict Go (autonomous, not independent) | [90fbd21] |
 
 ---
 
@@ -63,3 +63,4 @@ Go — every Mandatory criterion of QC-MIL-001 and QC-LANG-001 passes after the 
 [MIL-004]: ../../milestones/mil-004-framework-baseline.md
 [QC-MIL-001]: ../../../framework/qc/artifacts/qc-milestones-gateways.md
 [QC-LANG-001]: ../../../framework/qc/artifacts/qc-language-domain.md
+[90fbd21]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/030-nato-phonetic-alphabet/commit/90fbd2170d2f9295ad60edad82ef08ef96574ff6

@@ -11,7 +11,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 2026-10-14 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version, rows for RC-001 to RC-014 | [b69a604] |
 | 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline milestone, the wiki row, the new review records, the concern coverage and the domain education; reviewed in autonomous mode, not independent | [7378ede] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the re-review records of BC-001 and MIL-004 for task 6 and corrected the coverage note about source files; reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the re-review records of BC-001 and MIL-004 for task 6 and corrected the coverage note about source files; reviewed in autonomous mode, not independent | [90fbd21] |
 
 ---
 
@@ -107,3 +107,4 @@ Tracks backward and forward links between artifact instances so that the cross-a
 [7378ede]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/030-nato-phonetic-alphabet/commit/7378eded894a69048cfc5c5c56c787efc4723a4e
 [RC-023]: ./reviews/rc-023-business-case-task-6.md
 [RC-024]: ./reviews/rc-024-milestone-004-task-6.md
+[90fbd21]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/030-nato-phonetic-alphabet/commit/90fbd2170d2f9295ad60edad82ef08ef96574ff6
